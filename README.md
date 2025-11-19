@@ -44,9 +44,17 @@ debes crear una carpeta para guardar los archivos compilados
 
     mkdir bin
 
-Una vez creado el directorio, podemos compilar llamando a javac
+Una vez creado el directorio, podemos compilar llamando a javac. Si estamos utilizando linux,
+el comando a correr será:
 
-    javac -d bin src/*.java
+    find -name "*.java" > sources.txt
+    javac -d bin @sources.txt
+
+Si estamos en windows, debemos correr este otro comando:
+
+    dir /s /B *.java > sources.txt
+    javac -d bin @sources.txt
+
 
 Una vez compilado, podremos correr cualquier ejemplo utilizando el nombre de la clase que contiene
 el método main:
