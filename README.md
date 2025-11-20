@@ -56,6 +56,7 @@ Si estamos en windows CMD, debemos correr este otro comando:
     javac -d bin @sources.txt
 
 Si estamos en windows powershell, debemos correr este otro comando:
+
     Get-ChildItem -Recurse -Filter *.java -Name > sources.txt
     javac -d bin @sources.txt
 
