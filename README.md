@@ -50,11 +50,14 @@ el comando a correr será:
     find -name "*.java" > sources.txt
     javac -d bin @sources.txt
 
-Si estamos en windows, debemos correr este otro comando:
+Si estamos en windows CMD, debemos correr este otro comando:
 
     dir /s /B *.java > sources.txt
     javac -d bin @sources.txt
 
+Si estamos en windows powershell, debemos correr este otro comando:
+    Get-ChildItem -Recurse -Filter *.java -Name > sources.txt
+    javac -d bin @sources.txt
 
 Una vez compilado, podremos correr cualquier ejemplo utilizando el nombre de la clase que contiene
 el método main:
