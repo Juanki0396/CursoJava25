@@ -2,3 +2,4 @@ bin
 out
 *.class
 sources.txt
+.vscode
