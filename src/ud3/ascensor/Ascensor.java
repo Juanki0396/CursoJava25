@@ -1,6 +1,5 @@
 package ud3.ascensor;
 
-import ud3.ascensor.AscensorLimitException;
 
 public class Ascensor {
 	final int minPlanta;
@@ -19,6 +18,11 @@ public class Ascensor {
 		this.planta = 0;
 	}
 
+	/**
+	 * Sube el ascensor el número de plantas especificadas
+	 * @param	nPlantas Número de plantas a subir. Debe ser un número positivo
+	 * @return  La planta actual después de subir
+	 */
 	public int subir(int nPlantas) throws AscensorLimitException {
 		this.planta += nPlantas;
 		if (this.planta > this.maxPlanta) {
@@ -27,6 +31,11 @@ public class Ascensor {
 		return this.planta;
 	}
 
+	/**
+	 * Baja el ascensor el número de plantas especificadas
+	 * @param	nPlantas Número de plantas a bajar. Debe ser un número positivo
+	 * @return  La planta actual después de bajar
+	 */
 	public int bajar(int nPlantas) throws AscensorLimitException {
 		this.planta -= nPlantas;
 		if (this.planta < this.minPlanta) {
@@ -35,6 +44,9 @@ public class Ascensor {
 		return this.planta;
 	}
 
+	/**
+	 * Imprime información sobre la planta en la cual se encuentra el ascensor.
+	 */
 	public void imprimirInfo() {
 		System.out.println("El ascensor se encuentra en la planta " + this.planta);
 	}
