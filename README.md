@@ -65,4 +65,9 @@ el método main:
 
     java -cp bin udX.subpaquete.Clase
 
+## Generación de documentación
+
+Para generar la documentación se debe usar el siguiente comando:
+
+    javadoc -d doc @sources.txt
 
