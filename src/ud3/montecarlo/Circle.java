@@ -1,6 +1,6 @@
 package ud3.montecarlo;
 
-public class Circle extends Shape {
+public class Circle implements Shape {
     private double r;
 
     public Circle(double radius){

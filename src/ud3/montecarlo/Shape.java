@@ -1,9 +1,7 @@
 package ud3.montecarlo;
 
-public class Shape {
+public interface Shape {
 
-    public Shape(){}
-
-    public boolean isIn(Point p){return false;}
+    public boolean isIn(Point p);
     
 }
