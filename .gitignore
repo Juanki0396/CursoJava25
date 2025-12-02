@@ -1,5 +1,6 @@
 bin
 out
+data
 *.class
 sources.txt
 .vscode
