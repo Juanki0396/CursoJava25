@@ -2,8 +2,8 @@ package ud3.cifrados;
 
 public class Main {
     public static void main(String[] args) {
-        Cifrador cif = new Sustitucion();
-        if(runTest("Buenos dias", 23, cif)){
+        Cifrador cif = new Cesar();
+        if(runTest("Buenos dias", 200, cif)){
             System.out.println("El cifrador funciona como se esperaba");
         }
         else {
