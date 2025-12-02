@@ -18,8 +18,9 @@ public class Main {
         File f = p.toFile();
         Dial d = new Dial();
         ComplexDial complexD = new ComplexDial();
+        Scanner sc = null;
         try{
-            Scanner sc = new Scanner(f);
+            sc = new Scanner(f);
             while (sc.hasNext()) {
                 String line = sc.nextLine().strip();
                 d.move(line);
@@ -29,6 +30,9 @@ public class Main {
         catch (FileNotFoundException e){
             System.err.println("La ruta no pertenece a un archivo: " + p.toString());
             System.exit(1);
+        }
+        finally {
+            sc.close();
         }
         System.out.println("El contador es: " + d.getCounter());
         System.out.println("El contador complejo es: " + complexD.getCounter());
