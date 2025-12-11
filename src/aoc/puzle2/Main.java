@@ -14,12 +14,10 @@ public class Main {
         Path p = Path.of(args[0]);
         File f = p.toFile();
         Scanner sc = null;
+        String line = null;
         try{
             sc = new Scanner(f);
-            while (sc.hasNext()) {
-                String line = sc.nextLine().strip();
-                System.out.println(line);
-        }
+            line = sc.nextLine().strip();
         }
         catch (FileNotFoundException e){
             System.err.println("La ruta no pertenece a un archivo: " + p.toString());
@@ -29,6 +27,22 @@ public class Main {
             sc.close();
         }
         
+        String[] ranges = line.split(",");
+        long total = 0;
+
+        for(String rangeString : ranges){
+            Range r = new Range(rangeString);
+            while (r.hasNext()) {
+                String idString = r.next();
+                ID id = new ID(idString);
+                if(!id.isValid()){
+                    total += Long.parseLong(idString);
+                }
+            }
+        }
+
+        System.out.println("La suma de los IDs invalidos es: " + total);
+
     }
     
 }
