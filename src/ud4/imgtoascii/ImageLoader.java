@@ -59,4 +59,8 @@ public class ImageLoader {
         return img;
 
     }
+
+    public Integer getPixelMax(){
+        return this.pixelMax;
+    }
 }

@@ -16,15 +16,7 @@ public class Main {
     public static void main(String[] args) {
         Path fp = getImgFile(args);
         
-        ImageLoader loader = new ImageLoader(fp);
-        Integer[][] img = loader.getImage();
-
-        for(Integer[] row : img){
-            System.out.print("[ ");
-            for(Integer pixel : row){
-                System.out.printf("%d, ", pixel);
-            }
-            System.out.print("]\n");
-        }
+        ImageManager imgManager = new ImageManager(fp);
+        imgManager.printImg();
     }
 }
