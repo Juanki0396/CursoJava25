@@ -18,5 +18,6 @@ public class Main {
         
         ImageManager imgManager = new ImageManager(fp);
         imgManager.printImg();
+        imgManager.printInvertedImg();
     }
 }
